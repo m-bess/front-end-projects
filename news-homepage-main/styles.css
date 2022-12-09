@@ -1,0 +1,220 @@
+/* MAIN PAGE STYLES */
+
+@font-face {
+    font-family: 'Inter';
+    src: url(assets/fonts/Inter-VariableFont_wdth,slnt\,wght.ttf);
+}
+
+.site-content {
+    padding: 5rem 10rem;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.image-container {
+    display: block;
+}
+
+/* FONT STYLES */
+
+* {
+    font-family: 'Inter';
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+/* NAV BAR STYLES */
+
+ul>li:first-child {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+ul>li {
+    list-style: none;
+    font-size: 15px;
+    font-variation-settings: 'wght' 300, 'wdth' 90;
+    letter-spacing: .05em;
+    padding-right: 30px;
+}
+
+ul>li:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+/* CONTENT STYLES */
+
+.main-content {
+    margin-top: 3rem;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "headline new"
+        "article article";
+    padding: 10px 25px;
+}
+
+/* HEADLINE SECTION STYLES */
+
+.headline {
+    grid-area: headline;
+}
+
+.headline-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 2rem;
+}
+
+section.headline>div.copy {
+    display: flex;
+    flex-direction: row;
+}
+
+section.headline>div.copy>h1 {
+    font-size: 45px;
+    padding: 0 0 10px 0;
+    font-variation-settings: 'wght' 700, 'wdth' 100;
+    width: 50%;
+}
+
+div.description {
+    padding: 0 50px 10px;
+    width: 50%;
+}
+
+button.cta {
+    text-transform: uppercase;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: .15rem;
+    color: hsl(36, 100%, 99%);
+    background-color: hsl(5, 85%, 63%);
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+}
+
+button.cta:hover {
+    cursor: pointer;
+    color: hsl(36, 100%, 99%);
+    background-color: hsl(240, 100%, 5%);
+}
+
+/* NEW SECTION STYLES */
+
+.new {
+    grid-area: new;
+    background-color: hsl(240, 100%, 5%);
+}
+
+h1.new-title {
+    color: hsl(35, 77%, 62%);
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.new-story {
+    padding: 15px 30px;
+}
+
+div.new-story>.heading {
+    color: hsl(36, 100%, 99%);
+}
+
+div.new-story>.heading:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+div.new-story>.teaser {
+    color: hsl(233, 8%, 79%);
+}
+
+hr.new-divider {
+    border-top: .5px solid hsl(233, 8%, 79%);
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ARTICLE SECTION STYLES */
+
+.numbered-articles {
+    grid-area: article;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'one two three';
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas:
+        "image copy-container";
+    gap: 20px;
+}
+
+div.article.one {
+    grid-area: one;
+}
+
+div.article.two {
+    grid-area: two;
+}
+
+div.article.three {
+    grid-area: three;
+}
+
+div.article>div.image-container {
+    grid-area: image;
+}
+
+.article-img {
+    max-width: 100%;
+    height: auto;
+}
+
+div.article>div.copy {
+    grid-area: copy-container;
+}
+
+div.article>div.copy>p.teaser {
+    padding: 5px 10px;
+}
+
+div.article>div.copy>h2.heading:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
